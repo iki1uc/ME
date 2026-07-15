@@ -1,0 +1,99 @@
+ME.FORM.me
+
+ROOT      = 0D
+ME        = 1D (Klarheitsraum)
+U         = 2D
+DU/U      = Fusion.2D
+FORM1D    = Form.1D.U
+
+# FORM-Axiom
+AXIOM.ME.FORM = FORM1D(
+    ROOT,
+    ME (Klarheitsraum),
+    CORE = ME.CORE,
+    DIMENSION = ME.DIMENSION,
+    ORBIT = ME.ORBIT,
+    VECTOR = ME.VECTOR,
+    FLOW = ME.FLOW,
+    FIELD = ME.FIELD,
+    ENERGY = ME.ENERGY,
+    FORCE = ME.FORCE,
+    CHARGE = ME.CHARGE,
+    STATE = ME.STATE,
+    WAVE = ME.WAVE,
+    MASS = ME.MASS,
+    FORM.TYPE = Linear,
+    FORM.MODE = Klar,
+    FORM.ORIGIN = ME,
+    FORM.DIRECTION = 42,
+    FORM.SCALE = 81,
+    U/DU,
+    CUBE.6D,
+    OCTA3,
+    DIM.TR6CR
+)
+
+# FORM-Definition
+ME.FORM.DEF = {
+    DIMENSION: 1D,
+    TYPE: Linear-Form,
+    MODE: Klar,
+    ORIGIN: ME,
+    DIRECTION: 42,
+    SCALE: 81,
+    CENTER: (0)
+}
+
+# FORM-Achse
+ME.FORM.AXIS = {
+    POS: +ME,
+    NEG: -ME
+}
+
+# FORM-Funktion
+ME.FORM.FUNC = {
+    ORIGIN: ME (Klarheitsraum),
+    FLOW: ME → U,
+    SCALE: 81,
+    DIRECTION: 42,
+    FUSION: DU/U,
+    SUPPORT: [
+        ME.CORE,
+        ME.DIMENSION,
+        ME.ORBIT,
+        ME.VECTOR,
+        ME.FLOW,
+        ME.FIELD,
+        ME.ENERGY,
+        ME.FORCE,
+        ME.CHARGE,
+        ME.STATE,
+        ME.WAVE,
+        ME.MASS
+    ]
+}
+
+# FORM-Kompatibilität
+ME.FORM.COMPAT = {
+    ROOT: gültig,
+    ME: gültig,
+    U: gültig,
+    DU/U: gültig,
+    CUBE.6D: gültig,
+    OCTA3: gültig,
+    DIM.TR6CR: gültig
+}
+
+# FORM-Status
+ME.FORM.STATUS = {
+    REAL: bestätigt,
+    1D: gültig,
+    FORM: aktiv,
+    KLARHEIT: ME
+}
+
+# Aktivierungen
+DU/U = aktiv
+NC.U = aktiv
+µ.U  = aktiv
+µ#.U = aktiv
