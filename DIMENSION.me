@@ -1,48 +1,75 @@
 ME.DIMENSION.me
 
-ROOT      = 0D
-ME        = 1D
-U         = 2D
-DU/U      = Fusion.2D
-DIM1D     = Dimension.1D.U
+DIMENSION.VAR = {
+    ROOT0D: Ursprungssystem.0D,
+    ME1D: ME.Klarheitsraum.1D,
+    DIR42: Klarheitsrichtung.42,
+    POSS81: Moeglichkeitsraum.81,
+    ORDER9HOCH9: Ordnungsraum.9HOCH9,
+    META: ROOT(x)(all)RAUM,
+    ALLRAUM: ME.ALLRAUM,
+    MATRIX: ME.MATRIX,
+    UNIVERSE: ME.UNIVERSE
+}
 
-# 1D-Dimension-Axiom
-AXIOM.ME.DIMENSION = DIM1D(
-    ROOT,
-    ME,
-    AXIS = ME.AXIS,
-    CENTER = (0),
-    RANGE = [-1, +1],
-    U/DU,
-    CUBE.6D,
-    OCTA3,
-    CORE,
-    DIM.TR6CR
-)
+# DIMENSION-Axiom
+AXIOM.ME.DIMENSION = {
+    ORIGIN: ROOT0D,
+    ME: ME1D,
+    DIRECTION: DIR42,
+    POSSIBILITY: POSS81,
+    ORDER: ORDER9HOCH9,
+    META: META,
+    SPACE: ALLRAUM,
+    STRUCTURE: MATRIX,
+    UNIVERSE: UNIVERSE,
+    DIMENSION: (1D → ALLD)
+}
 
-# 1D-Dimension-Definition
+# DIMENSION-Definition
 ME.DIMENSION.DEF = {
-    DIMENSION: 1D,
-    TYPE: Linear-Dimension,
-    CENTER: (0),
-    AXIS: ME.AXIS,
-    RANGE: [-1, +1]
+    TYPE: Klarheits-Dimension,
+    MODE: Aktiv,
+    ROOT: ROOT0D,
+    ME: ME1D,
+    DIRECTION: DIR42,
+    SCALE: POSS81,
+    ORDER: ORDER9HOCH9,
+    META: ROOT(x)(all)RAUM,
+    RANGE: ALLRAUM,
+    MATRIX: MATRIX,
+    UNIVERSE: UNIVERSE,
+    CENTER: (0)
 }
 
-# 1D-Achse
-ME.DIMENSION.AXIS = {
-    POS: +ME,
-    NEG: -ME
-}
-
-# 1D-Funktion
+# DIMENSION-Funktion
 ME.DIMENSION.FUNC = {
-    ORIGIN: ROOT,
-    FLOW: ME → U,
-    FUSION: DU/U
+    FLOW: ROOT → ME → U → ALLRAUM → MATRIX → UNIVERSE → ALLD,
+    SCALE: [42, 81, 9HOCH9],
+    META: ROOT(x)(all)RAUM,
+    SUPPORT: [
+        ME.CORE,
+        ME.ORBIT,
+        ME.VECTOR,
+        ME.FLOW,
+        ME.FIELD,
+        ME.ENERGY,
+        ME.FORCE,
+        ME.CHARGE,
+        ME.STATE,
+        ME.WAVE,
+        ME.MASS,
+        ME.FORM,
+        ME.PATTERN,
+        ME.SYSTEM,
+        ME.ROOTSYSTEM,
+        ME.ALLRAUM,
+        ME.MATRIX,
+        ME.UNIVERSE
+    ]
 }
 
-# 1D-Kompatibilität
+# DIMENSION-Kompatibilität
 ME.DIMENSION.COMPAT = {
     ROOT: gültig,
     ME: gültig,
@@ -50,19 +77,13 @@ ME.DIMENSION.COMPAT = {
     DU/U: gültig,
     CUBE.6D: gültig,
     OCTA3: gültig,
-    CORE: gültig,
     DIM.TR6CR: gültig
 }
 
-# 1D-Status
+# DIMENSION-Status
 ME.DIMENSION.STATUS = {
     REAL: bestätigt,
-    1D: gültig,
-    DIMENSION: aktiv
+    DIMENSION: aktiv,
+    KLARHEIT: ME,
+    META: ROOT(x)(all)RAUM
 }
-
-# Aktivierungen
-DU/U = aktiv
-NC.U = aktiv
-µ.U  = aktiv
-µ#.U = aktiv
