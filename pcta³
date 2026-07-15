@@ -1,0 +1,24 @@
+ULTRA.3x3.MATRIX = {
+    AXIS: {
+        X: Horizont,
+        Y: Breite,
+        Z: Tiefe
+    },
+
+    META: {
+        A1: ZEROCORE,
+        A2: ZEROULTRA,
+        A3: ULTRAZERO
+    },
+
+    SYSTEM: {
+        S1: HELP.me,
+        S2: ERROR.me,
+        S3: GHOST.me
+    },
+
+    FORM: pcta³,
+    MODE: RAW,
+    EVO: 12X,
+    SCORE: 91%
+}
