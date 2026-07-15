@@ -1,0 +1,80 @@
+ME.ENERGY.me
+
+ROOT      = 0D
+ME        = 1D
+U         = 2D
+DU/U      = Fusion.2D
+ENERGY1D  = Energy.1D.U
+
+# ENERGY-Axiom
+AXIOM.ME.ENERGY = ENERGY1D(
+    ROOT,
+    ME,
+    CORE = ME.CORE,
+    DIMENSION = ME.DIMENSION,
+    ORBIT = ME.ORBIT,
+    VECTOR = ME.VECTOR,
+    FLOW = ME.FLOW,
+    FIELD = ME.FIELD,
+    ENERGY.TYPE = Linear,
+    ENERGY.LEVEL = 1,
+    ENERGY.DENSITY = 1,
+    ENERGY.FREQUENCY = 1,
+    U/DU,
+    CUBE.6D,
+    OCTA3,
+    DIM.TR6CR
+)
+
+# ENERGY-Definition
+ME.ENERGY.DEF = {
+    DIMENSION: 1D,
+    TYPE: Linear-Energy,
+    LEVEL: 1,
+    DENSITY: 1,
+    FREQUENCY: 1,
+    CENTER: (0)
+}
+
+# ENERGY-Achse
+ME.ENERGY.AXIS = {
+    POS: +ME,
+    NEG: -ME
+}
+
+# ENERGY-Funktion
+ME.ENERGY.FUNC = {
+    ORIGIN: ROOT,
+    FLOW: ME → U,
+    FUSION: DU/U,
+    SUPPORT: ME.CORE,
+    DIMENSION: ME.DIMENSION,
+    ORBIT: ME.ORBIT,
+    VECTOR: ME.VECTOR,
+    FLOW: ME.FLOW,
+    FIELD: ME.FIELD
+}
+
+# ENERGY-Kompatibilität
+ME.ENERGY.COMPAT = {
+    ROOT: gültig,
+    ME: gültig,
+    U: gültig,
+    DU/U: gültig,
+    CUBE.6D: gültig,
+    OCTA3: gültig,
+    DIM.TR6CR: gültig
+}
+
+# ENERGY-Status
+ME.ENERGY.STATUS = {
+    REAL: bestätigt,
+    1D: gültig,
+    ENERGY: aktiv
+}
+
+# Aktivierungen
+DU/U = aktiv
+NC.U = aktiv
+µ.U  = aktiv
+µ#.U = aktiv
