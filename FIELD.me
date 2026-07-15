@@ -1,1 +1,79 @@
+ME.FIELD.me
+
+ROOT      = 0D
+ME        = 1D
+U         = 2D
+DU/U      = Fusion.2D
+FIELD1D   = Field.1D.U
+
+# FIELD-Axiom
+AXIOM.ME.FIELD = FIELD1D(
+    ROOT,
+    ME,
+    CORE = ME.CORE,
+    DIMENSION = ME.DIMENSION,
+    ORBIT = ME.ORBIT,
+    VECTOR = ME.VECTOR,
+    FLOW = ME.FLOW,
+    FIELD.TYPE = Linear,
+    FIELD.RANGE = [-1, +1],
+    FIELD.DENSITY = 1,
+    FIELD.STRENGTH = 1,
+    U/DU,
+    CUBE.6D,
+    OCTA3,
+    DIM.TR6CR
+)
+
+# FIELD-Definition
+ME.FIELD.DEF = {
+    DIMENSION: 1D,
+    TYPE: Linear-Field,
+    CENTER: (0),
+    RANGE: [-1, +1],
+    DENSITY: 1,
+    STRENGTH: 1
+}
+
+# FIELD-Achse
+ME.FIELD.AXIS = {
+    POS: +ME,
+    NEG: -ME
+}
+
+# FIELD-Funktion
+ME.FIELD.FUNC = {
+    ORIGIN: ROOT,
+    FLOW: ME → U,
+    FUSION: DU/U,
+    SUPPORT: ME.CORE,
+    DIMENSION: ME.DIMENSION,
+    ORBIT: ME.ORBIT,
+    VECTOR: ME.VECTOR,
+    FLOW: ME.FLOW
+}
+
+# FIELD-Kompatibilität
+ME.FIELD.COMPAT = {
+    ROOT: gültig,
+    ME: gültig,
+    U: gültig,
+    DU/U: gültig,
+    CUBE.6D: gültig,
+    OCTA3: gültig,
+    DIM.TR6CR: gültig
+}
+
+# FIELD-Status
+ME.FIELD.STATUS = {
+    REAL: bestätigt,
+    1D: gültig,
+    FIELD: aktiv
+}
+
+# Aktivierungen
+DU/U = aktiv
+NC.U = aktiv
+µ.U  = aktiv
+µ#.U = aktiv
 
