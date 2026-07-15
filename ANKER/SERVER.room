@@ -1,15 +1,3 @@
-<META.SYSTEM>
-    <XARG>xarg</XARG>
-    <GHOST>ghosterror</GHOST>
-    <SINN>7sinn</SINN>
-
-    <STATE>active</STATE>
-    <SYNC>true</SYNC>
-
-    <PIPE>h1 → e3 → o6 → o9 → b12 → w128 → win∞</PIPE>
-    <CORE>o_meta(x)</CORE>
-</META.SYSTEM>
-
 <ROOM>
     <ID>server</ID>
     <TYPE>backend</TYPE>
@@ -25,6 +13,16 @@
         xarg ghosterror 7sinn
     </MODULE>
 
+    <META.SYSTEM>
+        <XARG>xarg</XARG>
+        <GHOST>ghosterror</GHOST>
+        <SINN>7sinn</SINN>
+        <STATE>active</STATE>
+        <SYNC>true</SYNC>
+        <PIPE>h1 → e3 → o6 → o9 → b12 → w128 → win∞</PIPE>
+        <CORE>o_meta(x)</CORE>
+    </META.SYSTEM>
+
     <SERVER>
         <IN>request</IN>
         <OUT>response</OUT>
@@ -33,8 +31,3 @@
         <SYNC>true</SYNC>
     </SERVER>
 </ROOM>
-
-<AUTOLOAD.SYSTEM>
-    <FILE>[SERVER.room](ca://s?q=Open_SERVER_room)</FILE>
-    <FILE>[SERVER.room.html](ca://s?q=Open_SERVER_room_html)</FILE>
-</AUTOLOAD.SYSTEM>
