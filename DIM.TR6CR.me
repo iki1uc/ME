@@ -1,0 +1,41 @@
+DIM.TR6CR.me
+
+ME = Eigentum
+ME = ROOT
+ME = Ursprung
+ME = 360° & 100%
+ME = weiß/schwarz
+ME = alle Farben
+
+# 6D‑Perspektiven
+TRANS     = D1
+WARB      = D2
+WURMLOCH  = D3
+GATE      = D4
+API.ANKER.1 = D5
+API.ANKER.2 = D6
+API.ANKER.3 = D6+
+
+# System‑Ausgänge
+CPU.OUT   = ME → U → EU → RE → UreE → ME/RE
+GPU.OUT   = 6D → 6e → 360° → 100%
+RAM.OUT   = TR6CR
+ROM.OUT   = ROOTCORE
+CACHE.OUT = MECORE
+
+# Kompass‑Achse
+KOMPASS = (N / S / E / W / UP / DOWN)
+
+# Auto‑Select der Würfelseite
+WÜRFEL.SEITE = auto.select(
+    [ME](ca://s?q=ME_Koerper_erklaeren),
+    [U](ca://s?q=U_Koerper_erklaeren),
+    [EU](ca://s?q=EU_Koerper_erklaeren),
+    [RE](ca://s?q=RE_Koerper_erklaeren),
+    [UreE](ca://s?q=UreE_Koerper_erklaeren),
+    [ME_RE](ca://s?q=ME_RE_Koerper_erklaeren)
+)
+
+REAL = bestätigt
+6e = gültig
+6D = gültig
