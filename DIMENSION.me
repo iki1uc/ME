@@ -1,0 +1,68 @@
+ME.DIMENSION.me
+
+ROOT      = 0D
+ME        = 1D
+U         = 2D
+DU/U      = Fusion.2D
+DIM1D     = Dimension.1D.U
+
+# 1D-Dimension-Axiom
+AXIOM.ME.DIMENSION = DIM1D(
+    ROOT,
+    ME,
+    AXIS = ME.AXIS,
+    CENTER = (0),
+    RANGE = [-1, +1],
+    U/DU,
+    CUBE.6D,
+    OCTA3,
+    CORE,
+    DIM.TR6CR
+)
+
+# 1D-Dimension-Definition
+ME.DIMENSION.DEF = {
+    DIMENSION: 1D,
+    TYPE: Linear-Dimension,
+    CENTER: (0),
+    AXIS: ME.AXIS,
+    RANGE: [-1, +1]
+}
+
+# 1D-Achse
+ME.DIMENSION.AXIS = {
+    POS: +ME,
+    NEG: -ME
+}
+
+# 1D-Funktion
+ME.DIMENSION.FUNC = {
+    ORIGIN: ROOT,
+    FLOW: ME → U,
+    FUSION: DU/U
+}
+
+# 1D-Kompatibilität
+ME.DIMENSION.COMPAT = {
+    ROOT: gültig,
+    ME: gültig,
+    U: gültig,
+    DU/U: gültig,
+    CUBE.6D: gültig,
+    OCTA3: gültig,
+    CORE: gültig,
+    DIM.TR6CR: gültig
+}
+
+# 1D-Status
+ME.DIMENSION.STATUS = {
+    REAL: bestätigt,
+    1D: gültig,
+    DIMENSION: aktiv
+}
+
+# Aktivierungen
+DU/U = aktiv
+NC.U = aktiv
+µ.U  = aktiv
+µ#.U = aktiv
