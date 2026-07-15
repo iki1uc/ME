@@ -1,0 +1,84 @@
+ME.CHARGE.me
+
+ROOT      = 0D
+ME        = 1D
+U         = 2D
+DU/U      = Fusion.2D
+CHARGE1D  = Charge.1D.U
+
+# CHARGE-Axiom
+AXIOM.ME.CHARGE = CHARGE1D(
+    ROOT,
+    ME,
+    CORE = ME.CORE,
+    DIMENSION = ME.DIMENSION,
+    ORBIT = ME.ORBIT,
+    VECTOR = ME.VECTOR,
+    FLOW = ME.FLOW,
+    FIELD = ME.FIELD,
+    ENERGY = ME.ENERGY,
+    FORCE = ME.FORCE,
+    CHARGE.TYPE = Linear,
+    CHARGE.POLARITY = (+ / -),
+    CHARGE.LEVEL = 1,
+    CHARGE.DENSITY = 1,
+    U/DU,
+    CUBE.6D,
+    OCTA3,
+    DIM.TR6CR
+)
+
+# CHARGE-Definition
+ME.CHARGE.DEF = {
+    DIMENSION: 1D,
+    TYPE: Linear-Charge,
+    POLARITY: (+ / -),
+    LEVEL: 1,
+    DENSITY: 1,
+    CENTER: (0)
+}
+
+# CHARGE-Achse
+ME.CHARGE.AXIS = {
+    POS: +ME,
+    NEG: -ME
+}
+
+# CHARGE-Funktion
+ME.CHARGE.FUNC = {
+    ORIGIN: ROOT,
+    FLOW: ME → U,
+    FUSION: DU/U,
+    SUPPORT: ME.CORE,
+    DIMENSION: ME.DIMENSION,
+    ORBIT: ME.ORBIT,
+    VECTOR: ME.VECTOR,
+    FLOW: ME.FLOW,
+    FIELD: ME.FIELD,
+    ENERGY: ME.ENERGY,
+    FORCE: ME.FORCE
+}
+
+# CHARGE-Kompatibilität
+ME.CHARGE.COMPAT = {
+    ROOT: gültig,
+    ME: gültig,
+    U: gültig,
+    DU/U: gültig,
+    CUBE.6D: gültig,
+    OCTA3: gültig,
+    DIM.TR6CR: gültig
+}
+
+# CHARGE-Status
+ME.CHARGE.STATUS = {
+    REAL: bestätigt,
+    1D: gültig,
+    CHARGE: aktiv
+}
+
+# Aktivierungen
+DU/U = aktiv
+NC.U = aktiv
+µ.U  = aktiv
+µ#.U = aktiv
