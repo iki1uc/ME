@@ -1,0 +1,17 @@
+<META.ROOM>
+    <ID>metat</ID>
+    <TYPE>meta-total</TYPE>
+    <MODE>raw</MODE>
+
+    <AXIS>X Y Z U V W</AXIS>
+    <META>xarg ghosterror 7sinn</META>
+
+    <TOTAL.META>
+        <IN>meta-t</IN>
+        <OUT>meta-total</OUT>
+        <STATE>active</STATE>
+        <SYNC>true</SYNC>
+    </TOTAL.META>
+
+    <CORE>o_meta(x)</CORE>
+</META.ROOM>
