@@ -1,0 +1,86 @@
+ME.STATE.me
+
+ROOT      = 0D
+ME        = 1D
+U         = 2D
+DU/U      = Fusion.2D
+STATE1D   = State.1D.U
+
+# STATE-Axiom
+AXIOM.ME.STATE = STATE1D(
+    ROOT,
+    ME,
+    CORE = ME.CORE,
+    DIMENSION = ME.DIMENSION,
+    ORBIT = ME.ORBIT,
+    VECTOR = ME.VECTOR,
+    FLOW = ME.FLOW,
+    FIELD = ME.FIELD,
+    ENERGY = ME.ENERGY,
+    FORCE = ME.FORCE,
+    CHARGE = ME.CHARGE,
+    STATE.TYPE = Linear,
+    STATE.MODE = Stable,
+    STATE.LEVEL = 1,
+    STATE.POLARITY = (+ / -),
+    U/DU,
+    CUBE.6D,
+    OCTA3,
+    DIM.TR6CR
+)
+
+# STATE-Definition
+ME.STATE.DEF = {
+    DIMENSION: 1D,
+    TYPE: Linear-State,
+    MODE: Stable,
+    LEVEL: 1,
+    POLARITY: (+ / -),
+    CENTER: (0)
+}
+
+# STATE-Achse
+ME.STATE.AXIS = {
+    POS: +ME,
+    NEG: -ME
+}
+
+# STATE-Funktion
+ME.STATE.FUNC = {
+    ORIGIN: ROOT,
+    FLOW: ME → U,
+    FUSION: DU/U,
+    SUPPORT: ME.CORE,
+    DIMENSION: ME.DIMENSION,
+    ORBIT: ME.ORBIT,
+    VECTOR: ME.VECTOR,
+    FLOW: ME.FLOW,
+    FIELD: ME.FIELD,
+    ENERGY: ME.ENERGY,
+    FORCE: ME.FORCE,
+    CHARGE: ME.CHARGE
+}
+
+# STATE-Kompatibilität
+ME.STATE.COMPAT = {
+    ROOT: gültig,
+    ME: gültig,
+    U: gültig,
+    DU/U: gültig,
+    CUBE.6D: gültig,
+    OCTA3: gültig,
+    DIM.TR6CR: gültig
+}
+
+# STATE-Status
+ME.STATE.STATUS = {
+    REAL: bestätigt,
+    1D: gültig,
+    STATE: aktiv
+}
+
+# Aktivierungen
+DU/U = aktiv
+NC.U = aktiv
+µ.U  = aktiv
+µ#.U = aktiv
