@@ -1,0 +1,17 @@
+<META.ROOM>
+    <ID>metab</ID>
+    <TYPE>meta-body</TYPE>
+    <MODE>raw</MODE>
+
+    <AXIS>X Y Z U V W</AXIS>
+    <META>xarg ghosterror 7sinn</META>
+
+    <BODY.META>
+        <IN>meta-b</IN>
+        <OUT>meta-body</OUT>
+        <STATE>active</STATE>
+        <SYNC>true</SYNC>
+    </BODY.META>
+
+    <CORE>o_meta(x)</CORE>
+</META.ROOM>
