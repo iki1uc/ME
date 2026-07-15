@@ -1,40 +1,87 @@
-<META.SYSTEM>
-    <XARG>xarg</XARG>
-    <GHOST>ghosterror</GHOST>
-    <SINN>7sinn</SINN>
+<!DOCTYPE ULTRA2.0>
+<ULTRA2.0.ENGINE>
 
-    <STATE>active</STATE>
-    <SYNC>true</SYNC>
+    <STATE>ACTIVE</STATE>
+    <MODE>AUTO</MODE>
+    <VERSION>2.0</VERSION>
 
-    <PIPE>h1 → e3 → o6 → o9 → b12 → w128 → win∞</PIPE>
-    <CORE>o_meta(x)</CORE>
-</META.SYSTEM>
-
-<ROOM>
-    <ID>server</ID>
-    <TYPE>backend</TYPE>
-    <MODE>raw</MODE>
+    <VECTOR>
+        horizont
+        breite
+        tiefe
+        ultra
+        wert
+    </VECTOR>
 
     <AXIS>X Y Z U V W</AXIS>
-    <ENERGIE>e2 e3 e6 e8 e12 e∞</ENERGIE>
-    <ORBIT>o1 o2 o3 o4 o5 o6 o7 o8 o9</ORBIT>
 
-    <MODULE>
+    <CHAIN>
+        h1 + e3 + o6 + o9 + b12 + w128
+        + nano + atom + raw + operator
+        + rev1.0 + beat∞ + win∞
+        + xarg + ghosterror + 7sinn
+    </CHAIN>
+
+    <FUSION>
+        win∞(rev1.0(beat∞(o9(o6(e3(h1(x)))))))
+    </FUSION>
+
+    <PIPE>
+        h1 → e3 → o6 → o9 → b12 → win∞
+    </PIPE>
+
+    <CORE>o_meta(x)</CORE>
+
+    <ZERO>
+        zero-core
+        zero-ultra
+        ultra-zero
+    </ZERO>
+
+    <HTML.MATRIX>
+        1.html
+        3.html
+        6.html
+        9.html
+        12.html
+        RAUM³.html
+        698869.html
+        gitter.html
+        cluster.html
+    </HTML.MATRIX>
+
+    <MODULES>
         nano atom raw operator
         w128 rev1.0 beat∞ win∞
         xarg ghosterror 7sinn
-    </MODULE>
+    </MODULES>
 
-    <SERVER>
-        <IN>request</IN>
-        <OUT>response</OUT>
-        <PORT>8080</PORT>
-        <STATE>active</STATE>
-        <SYNC>true</SYNC>
-    </SERVER>
-</ROOM>
+    <HELP>
+        help.me
+        error.me
+        ghost.me
+    </HELP>
 
-<AUTOLOAD.SYSTEM>
-    <FILE>[SERVER.room](ca://s?q=Open_SERVER_room)</FILE>
-    <FILE>[SERVER.room.html](ca://s?q=Open_SERVER_room_html)</FILE>
-</AUTOLOAD.SYSTEM>
+    <PCTA3>24X</PCTA3>
+    <RECALL>>=91%</RECALL>
+
+    <OCTA3>
+        server web net script js html css dom
+    </OCTA3>
+
+    <LOAD>
+        <ROOM>[ROMall](ca://s?q=Open_ROMall)</ROOM>
+        <ROOM>[UNIMETAROOM](ca://s?q=Open_UNIMETAROOM)</ROOM>
+        <ROOM>[SERVER](ca://s?q=Open_SERVER_room)</ROOM>
+        <ROOM>[WEB](ca://s?q=Open_WEB_room)</ROOM>
+        <ROOM>[HTML](ca://s?q=Open_HTML_room)</ROOM>
+        <ROOM>[CSS](ca://s?q=Open_CSS_room)</ROOM>
+        <ROOM>[JS](ca://s?q=Open_JS_room)</ROOM>
+        <ROOM>[SCRIPT](ca://s?q=Open_SCRIPT_room)</ROOM>
+        <ROOM>[DOM](ca://s?q=Open_DOM_room)</ROOM>
+        <ROOM>[EVENT](ca://s?q=Open_EVENT_room)</ROOM>
+        <ROOM>[RENDER](ca://s?q=Open_RENDER_room)</ROOM>
+        <ROOM>[NET](ca://s?q=Open_NET_room)</ROOM>
+    </LOAD>
+
+</ULTRA2.0.ENGINE>
