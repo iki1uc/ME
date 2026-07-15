@@ -1,11 +1,11 @@
 <!DOCTYPE ROOM>
-<WURM.OUT.ROOM.HTML>
+<WURM.IN.ROOM.HTML>
 
-    <HEADER>wurm.out / room / ultra.system</HEADER>
+    <HEADER>wurm.in / room / ultra.system</HEADER>
 
     <INFO>
-        <ID>wurm.out</ID>
-        <TYPE>output</TYPE>
+        <ID>wurm.in</ID>
+        <TYPE>input</TYPE>
         <MODE>raw</MODE>
     </INFO>
 
@@ -27,17 +27,16 @@
         <CORE>o_meta(x)</CORE>
     </META.SYSTEM>
 
-    <WURM.OUT>
-        <IN>core</IN>
-        <OUT>release</OUT>
+    <WURM.IN>
+        <IN>inject</IN>
+        <OUT>core</OUT>
         <STATE>active</STATE>
         <SYNC>true</SYNC>
-    </WURM.OUT>
+    </WURM.IN>
 
     <AUTOLOAD.SYSTEM>
-        <FILE>ANKER/WURM.out.room</FILE>
-        <FILE>ANKER/WURM.out.room.html</FILE>
+        <FILE>ANKER/WURM.in.room</FILE>
+        <FILE>ANKER/WURM.in.room.html</FILE>
     </AUTOLOAD.SYSTEM>
 
-</WURM.OUT.ROOM.HTML>
-
+</WURM.IN.ROOM.HTML>
