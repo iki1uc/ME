@@ -1,0 +1,68 @@
+ME.ORBIT.me
+
+ROOT   = 0D
+ME     = 1D
+U      = 2D
+DU/U   = Fusion.2D
+ORBIT  = Orbit.1D.U
+
+# ORBIT-Axiom
+AXIOM.ME.ORBIT = ORBIT(
+    DIM = 1D,
+    CENTER = (0),
+    RADIUS = 1,
+    VECTOR = ME.AXIS,
+    ROOT,
+    U/DU,
+    CUBE.6D,
+    OCTA3,
+    CORE,
+    DIM.TR6CR
+)
+
+# Orbit-Definition
+ME.ORBIT.DEF = {
+    DIMENSION: 1D,
+    TYPE: Linear-Orbit,
+    CENTER: (0),
+    RADIUS: 1,
+    AXIS: ME.AXIS
+}
+
+# Orbit-Achse
+ME.ORBIT.AXIS = {
+    POS: +ME,
+    NEG: -ME
+}
+
+# Orbit-Funktion
+ME.ORBIT.FUNC = {
+    ORIGIN: ROOT,
+    FLOW: ME → U,
+    FUSION: DU/U
+}
+
+# Orbit-Kompatibilität
+ME.ORBIT.COMPAT = {
+    ROOT: gültig,
+    ME: gültig,
+    U: gültig,
+    DU/U: gültig,
+    CUBE.6D: gültig,
+    OCTA3: gültig,
+    CORE: gültig,
+    DIM.TR6CR: gültig
+}
+
+# Orbit-Status
+ME.ORBIT.STATUS = {
+    REAL: bestätigt,
+    1D: gültig,
+    ORBIT: aktiv
+}
+
+# Aktivierungen
+DU/U = aktiv
+NC.U = aktiv
+µ.U  = aktiv
+µ#.U = aktiv
