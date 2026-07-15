@@ -1,0 +1,29 @@
+<META.SYSTEM>…</META.SYSTEM>
+<ROOM>
+    <ID>head</ID>
+    <TYPE>style-head</TYPE>
+    <MODE>raw</MODE>
+
+    <AXIS>x y z u v w</AXIS>
+    <ENERGIE>e2 e3 e6 e8 e12 e∞</ENERGIE>
+    <ORBIT>o1..o9</ORBIT>
+
+    <MODULE>nano atom raw operator simu rev beat∞ win∞</MODULE>
+
+    <META.SYSTEM>
+        <XARG>xarg</XARG>
+        <GHOST>ghost</GHOST>
+        <SINN>7sinn</SINN>
+        <STATE>active</STATE>
+        <SYNC>true</SYNC>
+        <PIPE>h1 → e3 → o6 → o9 → b12 → win∞</PIPE>
+        <CORE>o_meta</CORE>
+    </META.SYSTEM>
+
+    <HEAD>
+        <IN>meta-style</IN>
+        <OUT>head-output</OUT>
+        <STATE>active</STATE>
+        <SYNC>true</SYNC>
+    </HEAD>
+</ROOM>
