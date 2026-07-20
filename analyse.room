@@ -1,0 +1,68 @@
+<ANALYSE.ROOM>
+
+    <STATE>STATIC</STATE>
+    <MODE>ANALYSE</MODE>
+    <VERSION>ULTRA3.0-SAFE</VERSION>
+
+    <!-- 1. SCAN.map – Meta-Karte aller Dateien -->
+    <SCAN.MAP>
+        <EMPTY>empty_map</EMPTY>
+        <DUPLICATE>duplicate_map</DUPLICATE>
+        <UNUSED>unused_map</UNUSED>
+        <BROKEN>broken_links</BROKEN>
+        <META>meta_map</META>
+        <ZERO>zero_map</ZERO>
+        <ULTRA>ultra_map</ULTRA>
+        <RAW>raw_map</RAW>
+        <NC>nc_map</NC>
+    </SCAN.MAP>
+
+    <!-- 2. SCAN.report – Liste, was gelöscht werden kann -->
+    <SCAN.REPORT>
+        <DELETE>delete_candidates</DELETE>
+        <KEEP>keep_candidates</KEEP>
+        <CONFLICT>conflict_map</CONFLICT>
+    </SCAN.REPORT>
+
+    <!-- 3. SCAN.room – Raum-Version -->
+    <SCAN.ROOM>
+        ROOM.room
+        ROOM.raw
+        EDIT.room
+        RAW.me
+        ME-NC3×3.room
+        ME-NC6eM6D.room
+        ME-NC9×9.room
+        META360°.room
+        META².html
+        META³.html
+    </SCAN.ROOM>
+
+    <!-- 4. SCAN.meta – Meta-Ebene -->
+    <SCAN.META>
+        <AUTHOR>uROOM</AUTHOR>
+        <SYSTEM>ULTRA3.0</SYSTEM>
+        <SAFE_LEVEL>ABSOLUT</SAFE_LEVEL>
+        <RISK>ZERO</RISK>
+        <SOURCE>ULTRASOURCE.me</SOURCE>
+        <META>ULTRAMETA.me</META>
+        <CORE>ULTRAKERN.me</CORE>
+    </SCAN.META>
+
+    <!-- 5. SCAN.zero – ZERO-Konflikt-Analyse -->
+    <SCAN.ZERO>
+        ZEROABSOLUT.me
+        PRIMEZERO.me
+        zero-core
+        <CHECK>zero_conflicts</CHECK>
+    </SCAN.ZERO>
+
+    <!-- 6. SCAN.ultra – ULTRA-Konflikt-Analyse -->
+    <SCAN.ULTRA>
+        h1 → e3 → o6 → o9 → b12 → w128 → win∞
+        nano atom raw operator rev1.0 beat∞ win∞
+        xarg ghosterror 7sinn
+        <CHECK>ultra_conflicts</CHECK>
+    </SCAN.ULTRA>
+
+</ANALYSE.ROOM>
