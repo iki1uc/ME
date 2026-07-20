@@ -1,18 +1,17 @@
-TOR.ROOT.9x9 = {
-  mode: "COMM",
-  type: "AXIOM",
-  version: "9×9",
+// UROOM – Universal‑Raum
 
-  send: ["S1","S2","S3","S4","S5","S6","S7","S8","S9"],
-  recv: ["R1","R2","R3","R4","R5","R6","R7","R8","R9"],
+const UROOM = {
+    id: "uroom",
+    version: "1.0",
+    type: "UNIVERSAL",
+    state: "ACTIVE",
 
-  axiom3: ["h1","e3","o6"],
-  axiom4: ["h1","e3","o6","o9"],
+    root: TOR.ROOT.9x9,
+    identity: ID_ROOM,
 
-  ultra: ["b12","w128","win∞"],
+    vector: ID_ROOM.vector,   // Vector‑Kennung weitergegeben
 
-  safety: "NO-ROOT",
-  bridge: "READ-ONLY",
-  tmp_axiom: "3ECK/4ECK",
-  state: "STABLE"
-}
+    getVector(code) {
+        return this.vector.map[code] || "NO-VECTOR";
+    }
+};
